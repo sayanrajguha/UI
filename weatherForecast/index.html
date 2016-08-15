@@ -1,3 +1,6 @@
+<!--
+APPID : d8940f4db1a2ebf40ba5cebdbc797c31
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +20,8 @@
     <link rel="stylesheet" href="css/weather-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
@@ -25,25 +30,34 @@
   </head>
 
   <body>
-
+      <nav class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">weatherForecast</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="navbar-right">
+            <a href="javascript:void(0)" id="loginLink"><i class="fa fa-lock" id="loginIcon" aria-hidden="true"></i></a>
+          </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
      <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
           <div class="main">
           <div class="row">
             <div class="col-md-12 searchBar">
@@ -73,7 +87,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
@@ -92,7 +106,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
@@ -111,7 +125,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
@@ -133,7 +147,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
@@ -152,7 +166,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
@@ -171,24 +185,20 @@
                   </div>
                 </div>
                 <div class="col-md-3 weatherPanel secondPanel">
-                  <span class="miniIconLabel">35 C</span><i class="wi wi-thermometer miniIcon"></i>
+                  <span class="miniIconLabel">35 </span><i class="wi wi-celsius miniIcon"></i>
                 </div>
               </div>
             </div>
           </div>
           </div>
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
         </div>
-
       </div>
-
     </div>
-
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">2016 &copy; sayanrajguha@gmail.com</p>
+      </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
