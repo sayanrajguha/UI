@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>RMS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Custom styles for dashboard -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a href="#"><img src="images/logo2.jpg" alt="Logo" class="navbar-brand" /></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Help</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Sites</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Users</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Dashboard</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="#">
+                <span class="fa-stack iconStack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-industry fa-stack-1x thumbIcon"></i>
+                </span>
+              </a>
+              <span class="text-muted">
+                <p>
+                  Add Site Record
+                </p>
+              </span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="#">
+                <span class="fa-stack iconStack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-wrench fa-stack-1x thumbIcon"></i>
+                </span>
+              </a>
+              <span class="text-muted">
+                <p>
+                  Add Tool Record
+                </p>
+              </span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="#">
+                <span class="fa-stack iconStack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-exchange fa-stack-1x thumbIcon"></i>
+                </span>
+              </a>
+              <span class="text-muted"><p>View Transfer Summary</p></span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="#">
+                <span class="fa-stack iconStack">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-book fa-stack-1x thumbIcon"></i>
+                </span>
+              </a>
+              <span class="text-muted">
+                <p>
+                  Dictionary
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <h2 class="sub-header">Search</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <input type="text" name="name" value="" placeholder="Enter name..." class="form-control">
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="desc" value="" placeholder="Enter description..." class="form-control">
+            </div>
+            <div class="col-md-2">
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default active">Site</button>
+                <button type="button" class="btn btn-default">Tool</button>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-default" name="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+        		<div class="col-md-12">
+        			<div class="panel-group" id="panel-797317">
+        				<div class="panel panel-default">
+        					<div class="panel-heading">
+        						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-58940">Upcoming calibration dates</a>
+        					</div>
+        					<div id="panel-element-58940" class="panel-collapse collapse">
+        						<div class="panel-body">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="panel panel-default">
+        					<div class="panel-heading">
+        						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-137647">Out of date calibrations</a>
+        					</div>
+        					<div id="panel-element-137647" class="panel-collapse collapse">
+        						<div class="panel-body">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <script src="javascript/bootstrap.min.js"></script>
+
+  </body>
+</html>
