@@ -14,9 +14,13 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <!-- Custom styles for dashboard -->
     <link href="css/dashboard.css" rel="stylesheet">
+    <!-- Custom user defined CSS -->
     <link href="css/styles.css" rel="stylesheet">
 
   </head>
@@ -32,12 +36,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a href="#"><img src="images/logo2.jpg" alt="Logo" class="navbar-brand" /></a>
+            <a href="#"><img src="images/logo2.png" alt="Logo" class="navbar-brand" /></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
+            <li class="visible-xs visible-sm"><a href="index.html">Home</a></li>
+            <li class="visible-xs visible-sm"><a href="sites.html">Sites</a></li>
+            <li class="visible-xs visible-sm"><a href="tools.html">Tools</a></li>
+            <li class="visible-xs visible-sm"><a href="users.html">Users</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -56,177 +62,193 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Sites</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Users</a></li>
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="sites.html">Sites</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="users.html">Users</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <a href="#">
-                <span class="fa-stack iconStack">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-industry fa-stack-1x thumbIcon"></i>
+          <div class="content">
+            <div class="row placeholders">
+              <div class="col-xs-6 col-sm-3 placeholder">
+                <a href="#">
+                  <span class="fa-stack iconStack" id="stackSite">
+                    <i class="fa fa-circle fa-stack-2x" id="circleBgSite"></i>
+                    <i class="fa fa-industry fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+                <span class="text-muted">
+                  <p>
+                    Add Site Record
+                  </p>
                 </span>
-              </a>
-              <span class="text-muted">
-                <p>
-                  Add Site Record
-                </p>
-              </span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <a href="#">
-                <span class="fa-stack iconStack">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-wrench fa-stack-1x thumbIcon"></i>
+              </div>
+              <div class="col-xs-6 col-sm-3 placeholder">
+                <a href="#">
+                  <span class="fa-stack iconStack" id="stackTool">
+                    <i class="fa fa-circle fa-stack-2x" id="circleBgTool"></i>
+                    <i class="fa fa-wrench fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+                <span class="text-muted">
+                  <p>
+                    Add Tool Record
+                  </p>
                 </span>
-              </a>
-              <span class="text-muted">
-                <p>
-                  Add Tool Record
-                </p>
-              </span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <a href="#">
-                <span class="fa-stack iconStack">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-exchange fa-stack-1x thumbIcon"></i>
+              </div>
+              <div class="col-xs-6 col-sm-3 placeholder">
+                <a href="#">
+                  <span class="fa-stack iconStack" id="stackTransfer">
+                    <i class="fa fa-circle fa-stack-2x" id="circleBgTransfer"></i>
+                    <i class="fa fa-exchange fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+                <span class="text-muted"><p>View Transfer Summary</p></span>
+              </div>
+              <div class="col-xs-6 col-sm-3 placeholder">
+                <a href="#">
+                  <span class="fa-stack iconStack" id="stackDictionary">
+                    <i class="fa fa-circle fa-stack-2x" id="circleBgDictionary"></i>
+                    <i class="fa fa-book fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+                <span class="text-muted">
+                  <p>
+                    Dictionary
+                  </p>
                 </span>
-              </a>
-              <span class="text-muted"><p>View Transfer Summary</p></span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <a href="#">
-                <span class="fa-stack iconStack">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-book fa-stack-1x thumbIcon"></i>
-                </span>
-              </a>
-              <span class="text-muted">
-                <p>
-                  Dictionary
-                </p>
-              </span>
-            </div>
-          </div>
-
-          <h2 class="sub-header">Search</h2>
-          <div class="row">
-            <div class="col-md-4">
-              <input type="text" name="name" value="" placeholder="Enter name..." class="form-control">
-            </div>
-            <div class="col-md-4">
-              <input type="text" name="desc" value="" placeholder="Enter description..." class="form-control">
-            </div>
-            <div class="col-md-2">
-              <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default active">Site</button>
-                <button type="button" class="btn btn-default">Tool</button>
               </div>
             </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-default" name="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+            <h2 class="sub-header">Search</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <input type="text" name="name" value="" placeholder="Enter name..." class="form-control">
+              </div>
+              <div class="col-md-4">
+                <input type="text" name="desc" value="" placeholder="Enter description..." class="form-control">
+              </div>
+              <div class="col-md-2">
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default active" id="btnSite">Site</button>
+                  <button type="button" class="btn btn-default" id="btnTool">Tool</button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-default" name="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
             </div>
+            <hr>
+            <div class="row">
+          		<div class="col-md-12">
+          			<div class="panel-group" id="panel-797317">
+          				<div class=""  id="upcAccordian">
+                    <div class="panel panel-default">
+            					<div class="panel-heading">
+            						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-58940">Upcoming calibration dates</a>
+            					</div>
+            					<div id="panel-element-58940" class="panel-collapse collapse">
+            						<div class="panel-body">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+            						</div>
+            					</div>
+            				</div>
+          				</div>
+          				<div class="" id="oodAccordian">
+                    <div class="panel panel-default">
+            					<div class="panel-heading">
+            						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-137647">Out of date calibrations</a>
+            					</div>
+            					<div id="panel-element-137647" class="panel-collapse collapse">
+            						<div class="panel-body">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+            						</div>
+            					</div>
+            				</div>
+          				</div>
+          			</div>
+          		</div>
+          	</div>
           </div>
-          <hr>
-          <div class="row">
-        		<div class="col-md-12">
-        			<div class="panel-group" id="panel-797317">
-        				<div class="panel panel-default">
-        					<div class="panel-heading">
-        						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-58940">Upcoming calibration dates</a>
-        					</div>
-        					<div id="panel-element-58940" class="panel-collapse collapse">
-        						<div class="panel-body">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="panel panel-default">
-        					<div class="panel-heading">
-        						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-137647">Out of date calibrations</a>
-        					</div>
-        					<div id="panel-element-137647" class="panel-collapse collapse">
-        						<div class="panel-body">
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
-                      </table>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
         </div>
+      </div>
+      <div class="row">
+        <footer class="footer">
+          <div class="container">
+            <p class="copyright">2016 &copy; sayanrajguha@gmail.com</p>
+          </div>
+        </footer>
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
     <script src="javascript/bootstrap.min.js"></script>
-
+    <!-- Materialize script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- Custom user defined script -->
+    <script src="javascript/script.js"></script>
   </body>
 </html>
