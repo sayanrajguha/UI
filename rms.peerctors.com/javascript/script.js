@@ -18,4 +18,7 @@ $('#btnTool').on('click',function(e) {
 	$('#btnTool').toggleClass('active');
 	e.stopPropagation();
 });
+$('.stackFilter').on('click', function() {
+   $('.filterRow').toggleClass('hidden');
+});
 });

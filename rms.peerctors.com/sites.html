@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,9 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <!-- Custom styles for dashboard -->
+   <!-- Custom styles for dashboard -->
     <link href="css/dashboard.css" rel="stylesheet">
     <!-- Custom user defined CSS -->
     <link href="css/styles.css" rel="stylesheet">
@@ -36,19 +33,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a href="#"><img src="images/logo2.png" alt="Logo" class="navbar-brand" /></a>
+            <a href="javascript:void(0)"><img src="images/logo2.png" alt="Logo" class="navbar-brand" /></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="javascript:void(0)">Dashboard</a></li>
+            <li><a href="javascript:void(0)">Settings</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Help</a></li>
+                  <li><a href="javascript:void(0)">Profile</a></li>
+                  <li><a href="javascript:void(0)">Help</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
+                  <li><a href="javascript:void(0)">Logout</a></li>
                 </ul>
               </li>
           </ul>
@@ -60,15 +57,59 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li class="active"><a href="#">Sites</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Users</a></li>
+            <li><a href="javascript:void(0)">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="javascript:void(0)">Sites</a></li>
+            <li><a href="javascript:void(0)">Tools</a></li>
+            <li><a href="javascript:void(0)">Users</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Sites</h1>
           <div class="content">
+            <div class="row crudIcons">
+              <div class="col-xs-6 col-sm-4 placeholder-secondary">
+                <a href="javascript:void(0)">
+                  <span class="fa-stack stackAdd" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudAdd"></i>
+                    <i class="fa fa-plus fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-4 placeholder-secondary">
+                <a href="javascript:void(0)">
+                  <span class="fa-stack stackRemove" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
+                    <i class="fa fa-remove fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-4 placeholder-secondary">
+                <a href="javascript:void(0)">
+                  <span class="fa-stack stackFilter" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudFilter"></i>
+                    <i class="fa fa-filter fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="row filterRow hidden">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <select class="form-control btn-success">
+                  <option>Select Status</option>
+                  <option>Status 1</option>
+                  <option>Status 2</option>
+                  <option>Status 3</option>
+                </select>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <select class="form-control btn-danger">
+                  <option>Select Type</option>
+                  <option>Type 1</option>
+                  <option>Type 2</option>
+                  <option>Type 3</option>
+                </select>
+              </div>
+            </div>
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -99,22 +140,18 @@
                 </tr>
               </tbody>
             </table>
-            <div class="fixed-action-btn horizontal fab">
-              <a class="btn-floating btn-large red">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </a>
-              <ul>
-                <li><a class="btn-floating red"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-                <li><a class="btn-floating yellow darken-1"><i class="fa fa-edit" aria-hidden="true"></i></a></li>
-                <li><a class="btn-floating green"><i class="fa fa-remove" aria-hidden="true"></i></a></li>
-                <li><a class="btn-floating blue"><i class="fa fa-filter" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
+      <div class="row">
+        <footer class="footer footerSecondary">
+          <div class="container">
+            <p class="copyright">2016 &copy; sayanrajguha@gmail.com</p>
+          </div>
+        </footer>
+      </div>
     </div>
-
+    
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
