@@ -8,12 +8,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
 
     <title>RMS</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Jquery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link href="css/jquery.ui.min.css" rel="stylesheet">-->
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for dashboard -->
@@ -43,12 +44,15 @@
             <li class="visible-xs visible-sm"><a href="tools.html">Tools</a></li>
             <li class="visible-xs visible-sm"><a href="users.html">Users</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user" aria-hidden="true"></i> 
+                  <span class="caret"></span>
+                </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Profile <i class="fa fa-user pull-right" aria-hidden="true"></i></a></li>
+                  <li><a href="#">Help <i class="fa fa-question-circle-o pull-right" aria-hidden="true"></i></a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Logout</a></li>
+                  <li><a href="#">Logout <i class="fa fa-sign-out pull-right"></i></a></li>
                 </ul>
               </li>
           </ul>
@@ -71,7 +75,7 @@
           <div class="content">
             <div class="row placeholders">
               <div class="col-xs-6 col-sm-3 placeholder">
-                <a href="#">
+                <a href="#" data-toggle="modal" data-target="#addSiteModal">
                   <span class="fa-stack iconStack" id="stackSite">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgSite"></i>
                     <i class="fa fa-industry fa-stack-1x thumbIcon"></i>
@@ -84,7 +88,7 @@
                 </span>
               </div>
               <div class="col-xs-6 col-sm-3 placeholder">
-                <a href="#">
+                <a href="#" data-toggle="modal" data-target="#addToolModal">
                   <span class="fa-stack iconStack" id="stackTool">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgTool"></i>
                     <i class="fa fa-wrench fa-stack-1x thumbIcon"></i>
@@ -97,7 +101,7 @@
                 </span>
               </div>
               <div class="col-xs-6 col-sm-3 placeholder">
-                <a href="#">
+                <a href="transfer.html">
                   <span class="fa-stack iconStack" id="stackTransfer">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgTransfer"></i>
                     <i class="fa fa-exchange fa-stack-1x thumbIcon"></i>
@@ -106,7 +110,7 @@
                 <span class="text-muted"><p>View Transfer Summary</p></span>
               </div>
               <div class="col-xs-6 col-sm-3 placeholder">
-                <a href="#">
+                <a href="#" data-toggle="modal" data-target="#dictionaryModal">
                   <span class="fa-stack iconStack" id="stackDictionary">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgDictionary"></i>
                     <i class="fa fa-book fa-stack-1x thumbIcon"></i>
@@ -147,7 +151,7 @@
             					<div class="panel-heading">
             						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-58940">
             						   Upcoming calibration dates
-            						   <span class="badge">2</span>
+            						   <span class="badge notifyBadge">2</span>
             						   </a>
             					</div>
             					<div id="panel-element-58940" class="panel-collapse collapse">
@@ -190,7 +194,7 @@
             					<div class="panel-heading">
             						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-797317" href="#panel-element-137647">
             						   Out of date calibrations
-            						   <span class="badge"></span>
+            						   <span class="badge notifyBadge"></span>
             						   </a>
             					</div>
             					<div id="panel-element-137647" class="panel-collapse collapse">
@@ -244,14 +248,243 @@
     </div>
 
 
+<!-- Modals -->
+<!-- Modal Dictionary -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="dictionaryModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">
+              <i class="fa fa-book"></i> &emsp; <span>Dictionary</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="ui-widget">
+                <input type="text" name="search" id="dictionarySearch" class="form-control" placeholder="Start typing to search for a word" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="well displayList">
+              <ul class="list-group">
+                <li class="list-group-item">Word 1</li>
+                <li class="list-group-item">Word 2</li>
+                <li class="list-group-item">Word 3</li>
+                <li class="list-group-item">Word 4</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+                <li class="list-group-item">Word 5</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+<!-- Modal Add Site -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="addSiteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">
+              <i class="fa fa-industry"></i> &emsp; <span>Add Site</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <form>
+                <div class="form-group">
+                  <label for="siteName">Site Name</label>
+                  <input type="text" class="form-control" id="siteName" placeholder=" Enter Site Name e.g. NTPC, etc.">
+                </div>
+                <div class="form-group">
+                  <label for="siteAddress">Address</label>
+                  <input type="text" class="form-control" id="siteAddress" placeholder="Enter Site Address e.g. Bokaro, etc.">
+                </div>
+                <div class="form-group">
+                  <label for="status">Status</label>
+                  <select class="form-control" id="status">
+                    <option>Select Status</option>
+                    <option>Status 1</option>
+                    <option>Status 2</option>
+                    <option>Status 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select class="form-control" id="type">
+                    <option>Select Type</option>
+                    <option>Type 1</option>
+                    <option>Type 2</option>
+                    <option>Type 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="contact">Contact Person</label>
+                  <input type="text" class="form-control" id="contact" placeholder="Enter Person of contact Details (Name and contact number)">
+                </div>
+            </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+      			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+      				<div class="btn-group" role="group">
+      					<button type="button" id="saveImage" class="btn btn-default" data-action="save" role="button">Save</button>
+      				</div>
+      				<div class="btn-group" role="group">
+      					<button type="button" id="delImage" class="btn btn-default" data-dismiss="modal"  role="button">Cancel</button>
+      				</div>
+      			</div>
+      		</div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+<!-- Modal Add Tool -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="addToolModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">
+              <i class="fa fa-wrench"></i> &emsp; <span>Add Tool</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <form>
+                <div class="form-group">
+                  <label for="site">Site</label>
+                  <select class="form-control" id="site">
+                    <option>Select Site</option>
+                    <option>Site 1</option>
+                    <option>Site 2</option>
+                    <option>Site 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="toolID">Tool ID</label>
+                  <input type="text" class="form-control" id="toolID" placeholder=" Enter Tool ID">
+                </div>
+                <div class="form-group">
+                  <label for="toolName">Tool Name</label>
+                  <input type="text" class="form-control" id="toolName" placeholder=" Enter Tool Name e.g. SPANNER, etc.">
+                </div>
+                <div class="form-group">
+                  <label for="range">Range/Size</label>
+                  <input type="text" class="form-control" id="range" placeholder=" Enter Range or Size of Tool">
+                </div>
+                <div class="form-group">
+                  <label for="statusTool">Status</label>
+                  <select class="form-control" id="statusTool">
+                    <option>Select Status</option>
+                    <option>Status 1</option>
+                    <option>Status 2</option>
+                    <option>Status 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="categoryTool">Category</label>
+                  <select class="form-control" id="categoryTool">
+                    <option>Select Category</option>
+                    <option>Category 1</option>
+                    <option>Category 2</option>
+                    <option>Category 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="groupTool">Group</label>
+                  <select class="form-control" id="groupTool">
+                    <option>Select Group</option>
+                    <option>Group 1</option>
+                    <option>Group 2</option>
+                    <option>Group 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="quantity">Quantity</label>
+                  <input type="text" class="form-control" id="quantity" placeholder=" Enter Quantity (use numbers)">
+                </div>
+                <div class="form-group">
+                  <label for="calibID">Calibration ID</label>
+                  <input type="text" class="form-control" id="calibID" placeholder=" Enter Calibration ID">
+                </div>
+                <div class="form-group">
+                  <label for="calibNo">Calibration Test No.</label>
+                  <input type="text" class="form-control" id="calibNo" placeholder=" Enter Calibration Test No.">
+                </div>
+                <div class="form-group">
+                  <label for="calibDate">Calibration Test Date</label>
+                  <input type="text" class="form-control datepicker" id="calibDate" readonly placeholder="Click to select date">
+                </div>
+                <div class="form-group">
+                  <label for="calibValidity">Calibration Test Validity</label>
+                  <input type="text" class="form-control" id="calibValidity" placeholder=" Enter Calibration Validity">
+                </div>
+                <div class="form-group">
+                  <label for="calibAgency">Calibration Test Agency</label>
+                  <input type="text" class="form-control" id="calibAgency" placeholder="Enter Calibration Agency Details">
+                </div>
+                <div class="form-group">
+                  <label for="calibDue">Next Calibration Due Date</label>
+                  <input type="text" class="form-control datepicker" id="calibDue" readonly placeholder="Click to select date">
+                </div>
+            </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+      			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+      				<div class="btn-group" role="group">
+      					<button type="button" id="saveImage" class="btn btn-default" data-action="save" role="button">Save</button>
+      				</div>
+      				<div class="btn-group" role="group">
+      					<button type="button" id="delImage" class="btn btn-default" data-dismiss="modal"  role="button">Cancel</button>
+      				</div>
+      			</div>
+      		</div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+<!-- end Modals-->
+
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <!-- Jquery UI -->
+    <!--<script type="text/javascript" src="javascript/jquery.ui.min.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="javascript/bootstrap.min.js"></script>
-    <!-- Materialize script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <!-- Custom user defined script -->
     <script src="javascript/script.js"></script>
   </body>
