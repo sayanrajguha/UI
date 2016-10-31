@@ -14,6 +14,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Jquery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link href="css/jquery.ui.min.css" rel="stylesheet">-->
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for dashboard -->
@@ -67,7 +70,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Tools</h1>
           <div class="content">
-            <div class="row crudIcons">
+            <div class="row crudIcons crud">
               <div class="col-xs-6 col-sm-4 placeholder-secondary">
                 <a href="javascript:void(0)">
                   <span class="fa-stack stackAdd" id="">
@@ -77,7 +80,7 @@
                 </a>
               </div>
               <div class="col-xs-6 col-sm-4 placeholder-secondary">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" class="remove">
                   <span class="fa-stack stackRemove" id="">
                     <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
                     <i class="fa fa-remove fa-stack-1x thumbIcon"></i>
@@ -89,6 +92,24 @@
                   <span class="fa-stack stackFilter" id="">
                     <i class="fa fa-circle fa-stack-2x linkCrudFilter"></i>
                     <i class="fa fa-filter fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="row crudIcons saveCancel">
+              <div class="col-xs-6 col-sm-6 placeholder-secondary">
+                <a href="javascript:void(0)" class="confirmRemove">
+                  <span class="fa-stack stackRemoveConfirm" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
+                    <i class="fa fa-check fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-6 placeholder-secondary">
+                <a href="javascript:void(0)" class="confirmRemove">
+                  <span class="fa-stack stackRemoveCancel" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
+                    <i class="fa fa-times-circle fa-stack-1x thumbIcon"></i>
                   </span>
                 </a>
               </div>
@@ -141,14 +162,19 @@
                     <th>Site</th>
                     <th>Quantity</th>
                     <th>Comment</th>
-                    <th>
+                    <th class="detailsCell">
                       <i class="fa fa-pencil"></i>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">
+                      <span class="slNo">1</span>
+                      <div class="deleteColumn">
+                        <input type="radio" name="id" value="item1"/>
+                      </div>
+                    </th>
                     <td>Demo 1</td>
                     <td>Tool 1</td>
                     <td>14</td>
@@ -158,7 +184,7 @@
                     <td>Demo Site 1</td>
                     <td>1</td>
                     <td></td>
-                    <td>
+                    <td class="detailsCell">
                       <span>
                       <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
                       <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
@@ -166,7 +192,12 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
+                    <th scope="row">
+                      <span class="slNo">2</span>
+                      <div class="deleteColumn">
+                        <input type="radio" name="id" value="item1"/>
+                      </div>
+                    </th>
                     <td>Demo 2</td>
                     <td>Demo Tool 2</td>
                     <td>5 TON</td>
@@ -176,11 +207,11 @@
                     <td>HEAD OFFICE</td>
                     <td>1</td>
                     <td>Gone for Repair</td>
-                    <td>
+                    <td class="detailsCell">
                       <span>
-                      <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
-                      <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
-                    </span>
+                        <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -197,15 +228,18 @@
         </footer>
       </div>
     </div>
+    
+
 
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <!-- Jquery UI -->
+    <!--<script type="text/javascript" src="javascript/jquery.ui.min.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="javascript/bootstrap.min.js"></script>
-    <!-- Materialize script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <!-- Custom user defined script -->
     <script src="javascript/script.js"></script>
   </body>

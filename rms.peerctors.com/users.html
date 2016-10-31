@@ -12,8 +12,11 @@
 
     <title>RMS</title>
 
-    <!-- Bootstrap core CSS -->
+   <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Jquery UI CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link href="css/jquery.ui.min.css" rel="stylesheet">-->
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Custom styles for dashboard -->
@@ -67,9 +70,9 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Users</h1>
           <div class="content">
-            <div class="row crudIcons">
+            <div class="row crudIcons crud">
               <div class="col-xs-6 col-sm-4 placeholder-secondary">
-                <a href="javascript:void(0)">
+                <a href="#addUserModal" data-toggle="modal" data-target="#addUserModal">
                   <span class="fa-stack stackAdd" id="">
                     <i class="fa fa-circle fa-stack-2x linkCrudAdd"></i>
                     <i class="fa fa-plus fa-stack-1x thumbIcon"></i>
@@ -77,7 +80,7 @@
                 </a>
               </div>
               <div class="col-xs-6 col-sm-4 placeholder-secondary">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" class="remove">
                   <span class="fa-stack stackRemove" id="">
                     <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
                     <i class="fa fa-remove fa-stack-1x thumbIcon"></i>
@@ -89,6 +92,24 @@
                   <span class="fa-stack stackFilter" id="">
                     <i class="fa fa-circle fa-stack-2x linkCrudFilter"></i>
                     <i class="fa fa-filter fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="row crudIcons saveCancel">
+              <div class="col-xs-6 col-sm-6 placeholder-secondary">
+                <a href="javascript:void(0)" class="confirmRemove">
+                  <span class="fa-stack stackRemoveConfirm" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
+                    <i class="fa fa-check fa-stack-1x thumbIcon"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-6 placeholder-secondary">
+                <a href="javascript:void(0)" class="confirmRemove">
+                  <span class="fa-stack stackRemoveCancel" id="">
+                    <i class="fa fa-circle fa-stack-2x linkCrudRemove"></i>
+                    <i class="fa fa-times-circle fa-stack-1x thumbIcon"></i>
                   </span>
                 </a>
               </div>
@@ -107,28 +128,69 @@
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>User ID</th>
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Security</th>
+                  <th class="detailsCell">
+                      <i class="fa fa-pencil"></i>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row">
+                    <span class="slNo">1</span>
+                    <div class="deleteColumn">
+                      <input type="radio" name="userid" value="user1"/>
+                    </div>
+                  </th>
+                  <td>@mdo</td>
                   <td>Mark</td>
                   <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>admin</td>
+                  <td class="detailsCell">
+                    <span>
+                        <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                      </span>
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
+                  <th scope="row">
+                    <span class="slNo">2</span>
+                    <div class="deleteColumn">
+                      <input type="radio" name="userid" value="user2"/>
+                    </div>
+                  </th>
+                  <td>@fat</td>
                   <td>Jacob</td>
                   <td>Thornton</td>
-                  <td>@fat</td>
+                  <td>moderator</td>
+                  <td class="detailsCell">
+                    <span>
+                        <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                      </span>
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
+                  <th scope="row">
+                    <span class="slNo">3</span>
+                    <div class="deleteColumn">
+                      <input type="radio" name="userid" value="user3"/>
+                    </div>
+                  </th>
                   <td>@twitter</td>
+                  <td>Larry</td>
+                  <td>The Bird</td>
+                  <td>employee</td>
+                  <td class="detailsCell">
+                    <span>
+                        <a href="javascript:void(0)"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                      </span>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -145,14 +207,85 @@
       </div>
     </div>
 
+<!-- Modals -->
+
+<!-- Modal Add User -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="addUserModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">
+              <i class="fa fa-user"></i> &emsp; <span>Add User</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <form>
+                <div class="form-group">
+                  <label for="userID">User ID</label>
+                  <input type="text" class="form-control" id="userID" placeholder="Enter user ID">
+                </div>
+                <div class="form-group">
+                  <label for="pass">Password</label>
+                  <input type="text" class="form-control" id="pass" placeholder="Enter default password">
+                </div>
+                <div class="form-group">
+                  <label for="fName">First Name</label>
+                  <input type="text" class="form-control" id="fName" placeholder="Enter first name">
+                </div>
+                <div class="form-group">
+                  <label for="lName">Last Name</label>
+                  <input type="text" class="form-control" id="lName" placeholder="Enter last name">
+                </div>
+                <div class="form-group">
+                  <label for="status">Security</label>
+                  <select class="form-control">
+                    <option>Select Security</option>
+                    <option>Administrator</option>
+                    <option>Moderator</option>
+                    <option>Employee</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type">Site</label>
+                  <select class="form-control">
+                    <option>Select Site</option>
+                    <option>Site 1</option>
+                    <option>Site 2</option>
+                    <option>Site 3</option>
+                  </select>
+                </div>
+            </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+      			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+      				<div class="btn-group" role="group">
+      					<button type="button" id="saveImage" class="btn btn-default" data-action="save" role="button">Save</button>
+      				</div>
+      				<div class="btn-group" role="group">
+      					<button type="button" id="delImage" class="btn btn-default" data-dismiss="modal"  role="button">Cancel</button>
+      				</div>
+      			</div>
+      		</div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+<!-- End Modals-->
+
+
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="javascript/jquery.min.js"><\/script>')</script>
+    <!-- Jquery UI -->
+    <!--<script type="text/javascript" src="javascript/jquery.ui.min.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="javascript/bootstrap.min.js"></script>
-    <!-- Materialize script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <!-- Custom user defined script -->
     <script src="javascript/script.js"></script>
   </body>

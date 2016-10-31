@@ -35,7 +35,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a href="#"><img src="images/logo2.png" alt="Logo" class="navbar-brand" /></a>
+          <div class="logo">
+            <a href="#"><img src="images/logo2.png" alt="Logo" class="logoImg" /></a>
+          </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -49,7 +51,8 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Profile <i class="fa fa-user pull-right" aria-hidden="true"></i></a></li>
+                  <li><a href="#">Requests <span class="badge notifyBadge">2</span><i class="fa fa-exclamation-triangle pull-right" aria-hidden="true"></i></a></li>
+                  <li><a href="#profileModal" data-toggle="modal" data-target="#profileModal">Profile <i class="fa fa-user pull-right" aria-hidden="true"></i></a></li>
                   <li><a href="#">Help <i class="fa fa-question-circle-o pull-right" aria-hidden="true"></i></a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="#">Logout <i class="fa fa-sign-out pull-right"></i></a></li>
@@ -163,6 +166,7 @@
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Username</th>
+                                <th><i class="fa fa-pencil"></i></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -171,17 +175,32 @@
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
                                 <td colspan="2">Larry the Bird</td>
                                 <td>@twitter</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -206,6 +225,7 @@
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Username</th>
+                                <th><i class="fa fa-pencil"></i></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -214,17 +234,32 @@
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
                                 <td colspan="2">Larry the Bird</td>
                                 <td>@twitter</td>
+                                <td>
+                                  <span>
+                                    <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
+                                  </span>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -266,41 +301,55 @@
               </div>
             </div>
             <div class="row">
-              <div class="well displayList">
-              <ul class="list-group">
-                <li class="list-group-item">Word 1</li>
-                <li class="list-group-item">Word 2</li>
-                <li class="list-group-item">Word 3</li>
-                <li class="list-group-item">Word 4</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-                <li class="list-group-item">Word 5</li>
-              </ul>
-            </div>
+              <div class="displayList">
+                <div class="" id="dictionaryAccordian">
+                    <div class="panel panel-default">
+            					<div class="panel-heading viewAllHeading">
+            						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-element-999" href="#panel-element-999">
+            						   View All
+            						   <span class="badge notifyBadge"></span>
+            						   </a>
+            					</div>
+            					<div id="panel-element-999" class="panel-collapse collapse">
+            						<div class="panel-body">
+                          <ul class="list-group">
+                            <li class="list-group-item">Word 1</li>
+                            <li class="list-group-item">Word 2</li>
+                            <li class="list-group-item">Word 3</li>
+                            <li class="list-group-item">Word 4</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                            <li class="list-group-item">Word 5</li>
+                          </ul>
+            						</div>
+            					</div>
+            				</div>
+          				</div>
+              </div>
             </div>
           </div>
         </div><!-- /.modal-content -->
@@ -443,7 +492,7 @@
                 </div>
                 <div class="form-group">
                   <label for="calibDate">Calibration Test Date</label>
-                  <input type="text" class="form-control datepicker" id="calibDate" readonly placeholder="Click to select date">
+                  <input type="text" class="form-control datepicker dateField" id="calibDate" readonly placeholder="Click to select date">
                 </div>
                 <div class="form-group">
                   <label for="calibValidity">Calibration Test Validity</label>
@@ -455,7 +504,7 @@
                 </div>
                 <div class="form-group">
                   <label for="calibDue">Next Calibration Due Date</label>
-                  <input type="text" class="form-control datepicker" id="calibDue" readonly placeholder="Click to select date">
+                  <input type="text" class="form-control datepicker dateField" id="calibDue" readonly placeholder="Click to select date">
                 </div>
             </form>
             </div>
@@ -473,6 +522,113 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+<!-- Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="profileModalLabel">My Profile</h4>
+                    </div>
+                <div class="modal-body">
+                    <span class="pull-right">
+                      <a href=""><i class="fa fa-edit fa-2x"></i></a>
+                    </span>
+                    <center>
+                    <i class="fa fa-user fa-5x"></i>
+                    <h3 class="media-heading">Jane Doe <small>(Administrator)</small></h3>
+                    <span class="label label-success">Last login : Oct 31, 2016 11:57:25 PM</span>
+                    </center>
+                    <hr>
+                    <div class="text-left">
+                      <strong><small>Details</small></strong>
+                    </div>
+                    <center>
+                      <div class="profileDetails">
+                                                <p class="row">
+                          <span class="label label-default">
+                              User ID
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            janedoe@peerectors
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              First Name
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            Jane
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Last Name
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            Doe
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Security
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            admin
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Local IP
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            host3.dns2dns.com/103.235.104.87
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Remote Host
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            127.0.0.1
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Remote IP
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            127.0.0.1
+                          </span>
+                        </p>
+                        <p class="row">
+                          <span class="label label-default">
+                              Last logged in
+                          </span> 
+                          &nbsp; 
+                          <span class="label label-warning">
+                            Oct 31, 2016 11:57:25 PM
+                          </span>
+                        </p>
+                      </div>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- end Modals-->
 
