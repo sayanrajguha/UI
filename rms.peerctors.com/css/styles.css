@@ -114,7 +114,9 @@
 .word-mod,.word-store {
  font-size: 15px;
 }
-
+.home-labels {
+ margin : 0px -30px 0px 10px;
+}
 
 /* Modals */
 .modal-dialog {
