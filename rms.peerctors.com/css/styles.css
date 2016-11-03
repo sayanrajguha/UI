@@ -108,11 +108,12 @@
 .logo {
  overflow: hidden;
 }
-.displayList,.ui-widget {
+.displayList,.ui-widget,.dictionarySection {
  padding: 10px;
 }
-
-
+.word-mod,.word-store {
+ font-size: 15px;
+}
 
 
 /* Modals */
@@ -140,6 +141,13 @@
  text-align: left;
  width: 225px;
 }
+.sysName {
+ font-family: 'Julius Sans One', sans-serif;
+ font-size: 20px;
+ text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+}
+
+
 
 /************ Login **************/
 .loginLabels {
@@ -262,7 +270,7 @@
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 25px;
 }
 
 
@@ -295,4 +303,13 @@
  }
 .ui-autocomplete { 
  z-index:2000; 
+}
+.popover {
+    background: red;
+}
+.popover.left .arrow:after {
+    border-left-color: red;
+}
+.word-input,.word-store {
+ display: none;
 }

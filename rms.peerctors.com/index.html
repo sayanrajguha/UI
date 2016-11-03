@@ -296,59 +296,197 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="ui-widget">
-                <input type="text" name="search" id="dictionarySearch" class="form-control" placeholder="Start typing to search for a word" />
-              </div>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#toolNames" aria-controls="toolNames" role="tab" data-toggle="tab">Tool Names</a></li>
+                <li role="presentation"><a href="#toolStatus" aria-controls="toolStatus" role="tab" data-toggle="tab">Tool Status</a></li>
+                <li role="presentation"><a href="#toolCategory" aria-controls="toolCategory" role="tab" data-toggle="tab">Tool Category</a></li>
+                <li role="presentation"><a href="#toolGroup" aria-controls="toolGroup" role="tab" data-toggle="tab">Tool Group</a></li>
+                <li role="presentation"><a href="#siteNames" aria-controls="siteNames" role="tab" data-toggle="tab">Site Names</a></li>
+                <li role="presentation"><a href="#siteStatus" aria-controls="siteStatus" role="tab" data-toggle="tab">Site Status</a></li>
+                <li role="presentation"><a href="#siteTypes" aria-controls="siteTypes" role="tab" data-toggle="tab">Site Types</a></li>
+              </ul>
             </div>
-            <div class="row">
-              <div class="displayList">
-                <div class="" id="dictionaryAccordian">
-                    <div class="panel panel-default">
-            					<div class="panel-heading viewAllHeading">
-            						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-element-999" href="#panel-element-999">
-            						   View All
-            						   <span class="badge notifyBadge"></span>
-            						   </a>
-            					</div>
-            					<div id="panel-element-999" class="panel-collapse collapse">
-            						<div class="panel-body">
-                          <ul class="list-group">
-                            <li class="list-group-item">Word 1</li>
-                            <li class="list-group-item">Word 2</li>
-                            <li class="list-group-item">Word 3</li>
-                            <li class="list-group-item">Word 4</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                            <li class="list-group-item">Word 5</li>
-                          </ul>
-            						</div>
-            					</div>
-            				</div>
-          				</div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="toolNames">
+                <div class="row">
+                  <div class="ui-widget">
+                    <input type="text" name="search" id="dictionarySearch" class="form-control" placeholder="Start typing to search for a word" />
+                  </div>
+                </div>
+                <div class="row dictionarySection text-center">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="newWordName" placeholder="Enter new word...">
+                    </div>
+                    <button type="button" class="btn btn-primary">Add Word</button>
+                  </form>
+                </div>
+                <div class="row">
+                  <div class="displayList">
+                    <div class="" id="dictionaryAccordian">
+                        <div class="panel panel-default">
+                					<div class="panel-heading viewAllHeading">
+                						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-element-999" href="#panel-element-999">
+                						   View All
+                						   <span class="badge notifyBadge"></span>
+                						   </a>
+                					</div>
+                					<div id="panel-element-999" class="panel-collapse collapse">
+                						<div class="panel-body">
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word1" value="Word 1"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 1
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word2" value="Word 2"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 2
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word3" value="Word 3"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 3
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word4" value="Word 4"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 4
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word5" value="Word 5"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 5
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word6" value="Word 6"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 6
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <span class="word-input word-input-toolName">
+                                    <input type="text" class="input-md" name="word7" value="Word 7"/>
+                                  </span>
+                                  <span class="word word-toolName">
+                                    Word 7
+                                  </span>
+                                  <span class="word-mod pull-right">
+                                    <a href="javascript:void(0)" class="word-edit"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-remove"><i class="fa fa-remove" aria-hidden="true"></i></a>
+                                  </span>
+                                  <span class="word-store pull-right">
+                                    <a href="javascript:void(0)" class="word-save"><i class="fa fa-check" aria-hidden="true"></i></a>
+                                    &nbsp;
+                                    <a href="javascript:void(0)" class="word-cancel"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                  </span>
+                                </li>
+                              </ul>
+                						</div>
+                					</div>
+                				</div>
+              				</div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="toolStatus">
+                <p>Tool Status</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="toolCategory">
+                <p>Tool Category</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="toolGroup">
+                <p>Tool Group</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="siteNames">
+                <p>Site Names</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="siteStatus">
+                <p>Site Status</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="siteTypes">
+                <p>Site Types</p>
               </div>
             </div>
           </div>

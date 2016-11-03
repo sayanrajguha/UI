@@ -11,16 +11,46 @@ $('#btnShowPass').on('click',function() {
 });
 
 
-$("#upcAccordian").on('click', function() {
-	$("#panel-element-58940").collapse('toggle');
+$("#upcAccordian").on('click', function(e) {
+	if(e && e.target && e.target.className && (e.target.className.indexOf('panel-title')!=-1 
+	|| e.target.className.indexOf('panel-heading')!=-1 || e.target.className.indexOf('badge')!=-1)) {
+		$("#panel-element-58940").collapse('toggle');
+	}
 });
 
-$("#oodAccordian").on('click', function() {
-	$("#panel-element-137647").collapse('toggle');
+$("#oodAccordian").on('click', function(e) {
+	if(e && e.target && e.target.className && (e.target.className.indexOf('panel-title')!=-1 
+	|| e.target.className.indexOf('panel-heading')!=-1 || e.target.className.indexOf('badge')!=-1)) {
+		$("#panel-element-137647").collapse('toggle');
+	}
+	
 });
-$("#dictionaryAccordian").on('click', function() {
-	$("#panel-element-999").collapse('toggle');
+
+// Dictionary scripts
+$("#dictionaryAccordian").on('click', function(e) {
+	if(e && e.target && e.target.className && (e.target.className.indexOf('panel-title')!=-1 
+	|| e.target.className.indexOf('panel-heading')!=-1 || e.target.className.indexOf('badge')!=-1)) {
+		$("#panel-element-999").collapse('toggle');
+	}
 });
+
+$('.word-edit').on('click',function(e) {
+    var parent = $(this).parent().parent();
+    parent.find('.word').toggle();
+    parent.find('.word-input').toggle();
+    parent.find('.word-mod').toggle();
+    parent.find('.word-store').toggle();
+});
+$('.word-cancel').on('click',function(e) {
+    var parent = $(this).parent().parent();
+    parent.find('.word').toggle();
+    parent.find('.word-input').toggle();
+    parent.find('.word-mod').toggle();
+    parent.find('.word-store').toggle();
+});
+
+
+
 $('#btnSite').on('click',function(e) {
 	$('#btnSite').toggleClass('active');
 	$('#btnTool').toggleClass('active');
@@ -79,4 +109,9 @@ $('.dropdown-toggle').popover({
    'placement':'left',
    'content':'2'
 }).popover('show');
+
+
+
+
+
 });
