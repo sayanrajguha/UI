@@ -117,6 +117,17 @@
 .home-labels {
  margin : 0px -30px 0px 10px;
 }
+.idFont {
+ font-family: 'VT323', monospace;
+}
+.toolDetails {
+ text-align: center;
+}
+.toolNameHeading {
+ margin-top: 10px;
+}
+
+
 
 /* Modals */
 .modal-dialog {
