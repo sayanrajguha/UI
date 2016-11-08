@@ -51,7 +51,7 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Requests <span class="badge notifyBadge">2</span><i class="fa fa-exclamation-triangle pull-right" aria-hidden="true"></i></a></li>
+                  <li><a href="#userRequestModal" data-toggle="modal" data-target="#userRequestModal">Requests <span class="badge notifyBadge">2</span><i class="fa fa-exclamation-triangle pull-right" aria-hidden="true"></i></a></li>
                   <li><a href="#profileModal" data-toggle="modal" data-target="#profileModal">Profile <i class="fa fa-user pull-right" aria-hidden="true"></i></a></li>
                   <li><a href="#">Help <i class="fa fa-question-circle-o pull-right" aria-hidden="true"></i></a></li>
                   <li role="separator" class="divider"></li>
@@ -665,7 +665,7 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-<!-- Modal -->
+<!-- Profile Modal -->
     <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -771,6 +771,67 @@
             </div>
         </div>
     </div>
+
+<!-- Modal User Reset -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="userRequestModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center">
+              <i class="fa fa-envelope"></i> &emsp; <span>Requests</span>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>User ID</th>
+                    <th>Message</th>
+                    <th><i class="fa fa-pencil"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Hello</td>
+                    <td>
+                      <span>
+                        <a href="javascript:void(0)"><i class="fa fa-unlock-alt"></i></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Hi</td>
+                    <td>
+                      <span>
+                        <a href="javascript:void(0)"><i class="fa fa-unlock-alt"></i></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry the Bird</td>
+                    <td>Password Reset</td>
+                    <td>
+                      <span>
+                        <a href="javascript:void(0)"><i class="fa fa-unlock-alt"></i></a>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 
 <!-- end Modals-->
 

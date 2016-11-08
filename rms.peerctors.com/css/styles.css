@@ -126,7 +126,31 @@
 .toolNameHeading {
  margin-top: 10px;
 }
-
+.sectionBox {
+ height: 250px;
+ width: 350px;
+ display: flex;
+ align-items:center;
+}
+.sectionBtns {
+ /*margin-left: 40px;*/
+ width: 350px;
+}
+.sectionBtn {
+ font-weight: bold;
+    font-size: xx-large;
+    font-family: monospace;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: medium;
+    border-style: outset;
+}
+.sectionBtn:hover {
+ text-decoration: none;
+}
 
 
 /* Modals */
