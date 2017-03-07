@@ -105,10 +105,21 @@ $('.datepicker').datepicker({
 
 
 // showing popovers
-$('.dropdown-toggle').popover({
+if($(window).width() < 768) {
+	$('.dropdown-toggle').popover({
+   'placement':'right',
+   'content':'2'
+}).popover('show');	
+} else {
+	$('.dropdown-toggle').popover({
    'placement':'left',
    'content':'2'
 }).popover('show');
+}
+$('#nav-drop-link').on('click', function(e) {
+    $('.dropdown-toggle').popover('hide');
+});
+
 
 
 

@@ -46,7 +46,7 @@
             <li class="visible-xs visible-sm"><a href="tools.html">Tools</a></li>
             <li class="visible-xs visible-sm"><a href="users.html">Users</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="dropdown-toggle" id="nav-drop-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-user" aria-hidden="true"></i> 
                   <span class="caret"></span>
                 </a>
@@ -132,21 +132,24 @@
             </div>
 
             <h2 class="sub-header">Search</h2>
-            <div class="row">
-              <div class="col-md-4">
+            <div class="row search-mobile">
+              <div class="col-md-4 col-sm-4 col-xs-12">
                 <input type="text" name="name" value="" placeholder="Enter name..." class="form-control">
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 col-sm-4 col-xs-12">
                 <input type="text" name="desc" value="" placeholder="Enter description..." class="form-control">
               </div>
-              <div class="col-md-2">
-                <div class="btn-group" role="group" aria-label="...">
-                  <button type="button" class="btn btn-default active" id="btnSite">Site</button>
-                  <button type="button" class="btn btn-default" id="btnTool">Tool</button>
+              <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="btn-group-mobile-center">
+                  <div class="btn-group btn-group-mobile" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default active" id="btnSite">Site</button>
+                    <button type="button" class="btn btn-default" id="btnTool">Tool</button>
+                  </div>  
                 </div>
+                
               </div>
-              <div class="col-md-2">
-                <button type="button" class="btn btn-default" name="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <div class="col-md-2 col-sm-2 col-xs-12 btn-group-mobile-center">
+                <button type="button" class="btn btn-default btn-search-mobile" name="btnSearch"><i class="fa fa-search" aria-hidden="true"></i></button>
               </div>
             </div>
             <hr>
@@ -166,41 +169,42 @@
                           <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
-                                <th><i class="fa fa-pencil"></i></th>
+                                <th class="skip-mobile">ID</th>
+                                <th>Tool Name</th>
+                                <th>Site</th>
+                                <th>Calibration Due Date</th>
+                                <th class="skip-mobile"><i class="fa fa-pencil"></i></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">1</th>
+                                <td>Tool 1</td>
+                                <td>Site 1</td>
+                                <td>25.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">2</th>
+                                <td>Tool 1</td>
+                                <td>Site 1</td>
+                                <td>25.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">3</th>
+                                <td>Tool 1</td>
+                                <td>Site 1</td>
+                                <td>25.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
@@ -225,41 +229,42 @@
                           <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
-                                <th><i class="fa fa-pencil"></i></th>
+                                <th class="skip-mobile">ID</th>
+                                <th>Tool Name</th>
+                                <th>Site</th>
+                                <th>Calibration Due Date</th>
+                                <th class="skip-mobile"><i class="fa fa-pencil"></i></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">1</th>
+                                <td>Tool 2</td>
+                                <td>Site 2</td>
+                                <td>01.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">2</th>
+                                <td>Tool 2</td>
+                                <td>Site 2</td>
+                                <td>01.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>
+                                <th scope="row" class="skip-mobile">3</th>
+                                <td>Tool 2</td>
+                                <td>Site 2</td>
+                                <td>01.03.2017</td>
+                                <td class="skip-mobile">
                                   <span>
                                     <a href="javascript:void(0)"><i class="fa fa-eye"></i></a>
                                   </span>
