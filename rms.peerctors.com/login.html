@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" id="loginHTML">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +17,8 @@
     <!--<link href="css/jquery.ui.min.css" rel="stylesheet">-->
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Custom styles for dashboard -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- Custom user defined CSS -->
+    <link href="css/login.css" rel="stylesheet">
     <!-- Custom user defined CSS -->
     <link href="css/styles.css" rel="stylesheet">
     
@@ -28,81 +28,76 @@
   </head>
 
   <body id="loginBody">
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            
-            <div class="inner">
-              <img src="images/logo2.png" alt="Logo" class="logoImgLogin" /></a>
-              <h4 class="masthead-brand sysName">Resource Management System</h4>
-            </div>
-          </div>
-
-          <div class="inner cover">
-           <div class="login">
-              <div class="lbox" id="login-section">
-                 <div class="content">
-                    <div id="error">
-                    </div>
-                    <div class="form loginBox">
-                        <form id="loginForm">
-                          <div class="form-group">
-                            <input id="userid" class="form-control" type="text" autocomplete="off" placeholder="User ID" name="userid" />
-                            <div class="input-group">
-                              <input id="password" type="password" class="form-control" placeholder="Password">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default" role="button" type="button" id="btnShowPass"><i class="fa fa-eye"></i></button>
-                              </span>
-                            </div> 
+    <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <div class="inner">
+                              <img src="images/logo2.png" alt="Logo" class="logoImgLogin'img-responsive" /></a>
                           </div>
-                          <div class="form-group">
-                            <select class="form-control securityLoginDD">
-                              <option class="securityLoginDDItem">Select Security/Role</option>
-                              <option class="securityLoginDDItem">Admin</option>
-                              <option class="securityLoginDDItem">Moderator</option>
-                              <option class="securityLoginDDItem">Employee</option>
-                            </select>
-                          </div>
-                        </form>
-                        <div class="text-center">
-                          <input class="btn btn-success btn-login" type="button" value="Login" id="btnLogin" />
                         </div>
                     </div>
-                 </div>
-              </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h4 class="sysName">Resource Management System</h4>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom loginBox">
+  			                    <form role="form" action="" method="post" class="login-form">
+  			                    	<div class="form-group">
+                                <input id="userid" class="form-control" type="text" autocomplete="off" placeholder="User ID" name="userid" />
+                                <div class="input-group">
+                                  <input id="password" type="password" class="form-control" placeholder="Password">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" role="button" type="button" id="btnShowPass"><i class="fa fa-eye"></i></button>
+                                  </span>
+                                </div> 
+                              </div>
+                              <div class="form-group">
+                                <select class="form-control securityLoginDD">
+                                  <option class="securityLoginDDItem">Select Security/Role</option>
+                                  <option class="securityLoginDDItem">Admin</option>
+                                  <option class="securityLoginDDItem">Moderator</option>
+                                  <option class="securityLoginDDItem">Employee</option>
+                                </select>
+                              </div>
+  			                     <button type="submit" class="btn btn-success">Sign in!</button>
+  			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <div class="col-sm-6 col-md-6 col-xs-12 col-lg-6 text-center">
+                              <a href="#resetPasswordModal" data-toggle="modal" data-target="#resetPasswordModal">Forgot Password?</a>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-xs-12 col-lg-6 text-center">
+                              <a href="#">Back to Main Site</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mastfoot">
+                      <div class="inner">
+                        <p> 
+                          All rights reserved &copy; <a href="#">P. E. Erectors Pvt. Ltd.</a>
+                        </p>
+                        <p>
+                          Design &copy; <a href="#">Sayanraj Guha | sayanrajguha@gmail.com</a>
+                        </p>
+                      </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="login">
-            <div class="row extraLinks">
-              <div class="col-md-6 text-center">
-                <a href="#resetPasswordModal" data-toggle="modal" data-target="#resetPasswordModal">Forgot Password?</a>
-              </div>
-              <div class="col-md-5 text-center">
-                <a href="#">Back to Main Site</a>
-              </div>
-            </div>
-          </div>
-          <div class="mastfoot">
-            <div class="inner">
-              <p> 
-                All rights reserved &copy; <a href="#">P. E. Erectors Pvt. Ltd.</a>
-              </p>
-              <p>
-                Design &copy; <a href="#">Sayanraj Guha | sayanrajguha@gmail.com</a>
-              </p>
-            </div>
-          </div>
-
+            
         </div>
-
-      </div>
-
-    </div>
-
 <!-- Modals -->
 <!-- Modal Reset Password -->
     <div class="modal fade" tabindex="-1" role="dialog" id="resetPasswordModal">
