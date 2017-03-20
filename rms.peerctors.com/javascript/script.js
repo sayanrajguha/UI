@@ -105,6 +105,7 @@ $('.datepicker').datepicker({
 
 
 // showing popovers
+//have to remove for moderator
 if($(window).width() < 768) {
 	$('.dropdown-toggle').popover({
    'placement':'right',

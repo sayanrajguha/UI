@@ -44,14 +44,12 @@
             <li class="visible-xs visible-sm"><a href="index.html">Home</a></li>
             <li class="visible-xs visible-sm"><a href="sites.html">Sites</a></li>
             <li class="visible-xs visible-sm"><a href="tools.html">Tools</a></li>
-            <li class="visible-xs visible-sm"><a href="users.html">Users</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" id="nav-drop-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-user" aria-hidden="true"></i> 
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#userRequestModal" data-toggle="modal" data-target="#userRequestModal">Requests <span class="badge notifyBadge">2</span><i class="fa fa-exclamation-triangle pull-right" aria-hidden="true"></i></a></li>
                   <li><a href="#profileModal" data-toggle="modal" data-target="#profileModal">Profile <i class="fa fa-user pull-right" aria-hidden="true"></i></a></li>
                   <li><a href="#">Help <i class="fa fa-question-circle-o pull-right" aria-hidden="true"></i></a></li>
                   <li role="separator" class="divider"></li>
@@ -70,27 +68,13 @@
             <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
             <li><a href="sites.html">Sites</a></li>
             <li><a href="tools.html">Tools</a></li>
-            <li><a href="users.html">Users</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome to your Dashboard, <span id="userName">&lt;user_name&gt;</span> </h1>
           <div class="content">
             <div class="row placeholders">
-              <div class="col-xs-6 col-sm-3 placeholder">
-                <a href="#" data-toggle="modal" data-target="#addSiteModal">
-                  <span class="fa-stack iconStack" id="stackSite">
-                    <i class="fa fa-circle fa-stack-2x" id="circleBgSite"></i>
-                    <i class="fa fa-industry fa-stack-1x thumbIcon"></i>
-                  </span>
-                </a>
-                <span class="text-muted">
-                  <p class="home-labels">
-                    Add Site Record
-                  </p>
-                </span>
-              </div>
-              <div class="col-xs-6 col-sm-3 placeholder">
+              <div class="col-xs-4 col-sm-4 placeholder">
                 <a href="#" data-toggle="modal" data-target="#addToolModal">
                   <span class="fa-stack iconStack" id="stackTool">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgTool"></i>
@@ -103,7 +87,7 @@
                   </p>
                 </span>
               </div>
-              <div class="col-xs-6 col-sm-3 placeholder">
+              <div class="col-xs-4 col-sm-4 placeholder">
                 <a href="transfer.html">
                   <span class="fa-stack iconStack" id="stackTransfer">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgTransfer"></i>
@@ -116,7 +100,7 @@
                   </p>
                 </span>
               </div>
-              <div class="col-xs-6 col-sm-3 placeholder">
+              <div class="col-xs-4 col-sm-4 placeholder">
                 <a href="#" data-toggle="modal" data-target="#dictionaryModal">
                   <span class="fa-stack iconStack" id="stackDictionary">
                     <i class="fa fa-circle fa-stack-2x" id="circleBgDictionary"></i>
@@ -324,15 +308,8 @@
                     <input type="text" name="search" id="dictionarySearch" class="form-control" placeholder="Start typing to search for a word" />
                   </div>
                 </div>
-                <div class="row dictionarySection text-center">
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="newWordName" placeholder="Enter new word...">
-                    </div>
-                    <button type="button" class="btn btn-primary">Add Word</button>
-                  </form>
-                </div>
                 <div class="row">
+                  <h6>Edit/Remove links have to removed for moderator</h6>
                   <div class="displayList">
                     <div class="" id="dictionaryAccordian">
                         <div class="panel panel-default">
@@ -579,11 +556,8 @@
               <form>
                 <div class="form-group">
                   <label for="site">Site</label>
-                  <select class="form-control" id="site">
-                    <option>Select Site</option>
+                  <select class="form-control" id="site" readonly>
                     <option>Site 1</option>
-                    <option>Site 2</option>
-                    <option>Site 3</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -836,7 +810,7 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    
+
 <!-- Modal Edit User -->
     <div class="modal fade" tabindex="-1" role="dialog" id="editUserModal">
       <div class="modal-dialog" role="document">
@@ -910,7 +884,6 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
 <!-- end Modals-->
 
     <!-- Jquery -->
